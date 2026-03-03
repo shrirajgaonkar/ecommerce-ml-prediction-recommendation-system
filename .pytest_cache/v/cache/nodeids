@@ -1,0 +1,8 @@
+[
+  "tests/test_data.py::test_data_types_and_missing",
+  "tests/test_data.py::test_synthetic_data_generation",
+  "tests/test_features.py::test_empty_history",
+  "tests/test_features.py::test_feature_leakage_and_logic",
+  "tests/test_model.py::test_predict_proba_shape",
+  "tests/test_model.py::test_recommender_shape_and_logic"
+]

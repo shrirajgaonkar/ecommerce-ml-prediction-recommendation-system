@@ -1,0 +1,8 @@
+.venv/
+venv/
+data/
+reports/
+ecomm.db
+__pycache__/
+*.pyc
+.pytest_cache/
