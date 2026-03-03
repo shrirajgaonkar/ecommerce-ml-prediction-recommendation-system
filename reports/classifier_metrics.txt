@@ -1,0 +1,8 @@
+=== Purchase Prediction Classifier ===
+ROC-AUC:   0.4867
+Precision: 0.1171
+Recall:    0.0143
+F1-Score:  0.0255
+Confusion Matrix:
+[[4992   98]
+ [ 897   13]]

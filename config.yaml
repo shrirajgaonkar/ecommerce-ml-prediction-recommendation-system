@@ -1,0 +1,33 @@
+# Configuration for E-Commerce ML Project
+
+data:
+  raw_data_path: "data/raw/events.csv"
+  processed_dir: "data/processed/"
+  db_path: "sqlite:///ecomm.db"
+
+features:
+  snapshot_days: 7     # number of days next to predict purchase
+  history_windows: [1, 7, 14, 30] # days looking back for user stats
+
+model_classifier:
+  target_col: "purchased_next_7d"
+  test_size: 0.2
+  random_state: 42
+  model_type: "hist_gradient_boosting" # "logistic_regression" or "hist_gradient_boosting"
+  cv_splits: 5
+  cutoff_days: 14   # Leave last 14 days for test
+
+model_recommender:
+  factors: 64
+  regularization: 0.1
+  iterations: 30
+  recommend_k: 10
+  cutoff_days: 14   # Evaluate on last 14 days
+  weights:
+    view: 1
+    add_to_cart: 3
+    purchase: 6
+
+api:
+  host: "0.0.0.0"
+  port: 8000
